@@ -4,6 +4,11 @@ let users = [
         "password": "K9mP#xL2$vN8qR"
     },
     {
+        "username": "sachin",
+        "password": "123"
+
+    },
+    {
         "username": "lunar_spark92",
         "password": "Tz5@wQ7!hB3nF"
     },

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, use } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Text, View, StyleSheet, Image, TouchableOpacity,
   ActivityIndicator, TextInput, Animated, Alert
@@ -43,14 +43,14 @@ export default function Index() {
       );
 
       if (userExists) {
-        router.replace("./(tabs)/home"); // Success path
+        router.replace("./(tabs)/Home"); // Success path
       } else {
         Alert.alert(
           "Access Denied",
           "Incorrect username or password.",
           [
             { text: "Try Again" },
-            { text: "Sign Up", onPress: () => router.push("./(Auth)/signIn") }
+            { text: "Sign Up", onPress: () => router.push("./(Auth)/signUp") }
           ]
         );
       }
@@ -103,7 +103,7 @@ export default function Index() {
           )}
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => router.push("./(Auth)/signIn")}>
+        <TouchableOpacity onPress={() => router.navigate("./(Auth)/signUp")}>
           <Text style={styles.signUpLink}>New here? Create an account</Text>
         </TouchableOpacity>
       </Animated.View>
